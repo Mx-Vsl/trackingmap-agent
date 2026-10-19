@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm", "wheel", "toml"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "trackingmap-agent"
+version = "0.2.0"
+description = "Collecting Lora GPS Trackerr information in a database"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+    { name = "Achim Brunner", email = "achim.brunner@gmx.de" }
+]
+license = {text = "BSD 3-Clause"}
+classifiers = [
+    "License :: OSI Approved :: BSD 3-Clause",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.13"
+]
+
+dependencies = [
+    "toml>=0.10.2",
+    "pandas>=1.0.0",
+    "streamlit>=1.0.0",
+    "folium>=0.12.0",
+    "streamlit-folium>=0.6.0",
+    "paho-mqtt",
+    "python-dotenv",
+    "pyodbc",
+    "tzdata"
+]
+
+[project.optional-dependencies]
+test = [
+  "pytest > 5.0.0",
+  "pytest-cov[all]"
+]
+
+[project.urls]
+documentation = "https://github.com/achim0x/trackermap"
+repository = "https://github.com/achim0x/trackermap"
+tracker = "https://github.com/achim0x/trackermap"
+
+[project.scripts]
+trackingmap-agent = "trackingmap_agent.trackingmap_agent:main"
+
+[tool.pytest.ini_options]
+pythonpath = [
+  "src"
+]

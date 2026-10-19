@@ -1,8 +1,10 @@
 toml==0.10.2
-paho-mqtt 
-python-dotenv
+paho-mqtt
+python-dotenv>=1.0
 tzdata
-csv
-zoneinfo
-datetime
-dotenv
+pyodbc
+psycopg2-binary>=2.9
+pandas>=1.0.0
+streamlit>=1.0.0
+folium>=0.12.0
+streamlit-folium>=0.6.0
